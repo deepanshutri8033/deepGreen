@@ -378,7 +378,7 @@ export function AboutUs() {
         <video
           ref={fallbackVideoRef}
           className="absolute inset-0 w-full h-full object-cover"
-          style={{ display: "none" }}
+          style={{ display: "block" }}
           muted
           playsInline
           preload="auto"
@@ -567,28 +567,7 @@ export function AboutUs() {
         </section>
       </div>
 
-      {/* Frame Loading Screen Spinner (Hidden once frames are ready or fallback is set) */}
-      <AnimatePresence>
-        {loadingFrames && !useFallbackVideo && (
-          <motion.div
-            initial={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-[#060a08] flex flex-col items-center justify-center gap-4 text-emerald-300"
-          >
-            <div className="w-12 h-12 border-2 border-emerald-500/20 border-t-emerald-500 rounded-full animate-spin" />
-            <div className="flex flex-col items-center gap-1">
-              <span className="text-[10px] font-mono uppercase tracking-[0.25em]">
-                Ingesting Satellite Footage...
-              </span>
-              {framesCount > 0 && (
-                <span className="text-[9px] font-mono text-emerald-500/60">
-                  Decompressing frames...
-                </span>
-              )}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+
 
       {/* Simple Global CSS utility rules for Section 3 slide-in */}
       <style jsx global>{`
