@@ -137,7 +137,6 @@ export function VideoIntro({ onComplete }: VideoIntroProps) {
             ref={videoRef}
             className="absolute inset-0 h-full w-full object-cover"
             src="/v1.mp4"
-            muted
             playsInline
             onEnded={finishIntro}
           />

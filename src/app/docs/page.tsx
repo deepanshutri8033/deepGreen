@@ -7,6 +7,7 @@ import { ArrowLeft, BookOpen, Cpu, Leaf, Brain, ShieldCheck, Menu, X } from "luc
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { Navbar } from "@/components/deepgreen/navbar";
+import { Footer } from "@/components/deepgreen/cta-footer";
 
 const BG_IMAGE_1 = "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260609_195923_b0ba8ace-1d1d-4f2c-9a28-1ab84b330680.png&w=1280&q=85";
 const BG_IMAGE_2 = "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260609_201152_bba90a12-bf12-459f-91f0-51f237dbaf3b.png&w=1280&q=85";
@@ -336,16 +337,9 @@ export default function DocsPage() {
               </section>
             </div>
 
-            {/* Footer */}
-            <div className="mt-16 border-t border-white/[0.08] pt-8 flex items-center justify-between text-xs text-neutral-500 font-sans">
-              <span>DeepGreen Labs © 2026</span>
-              <div className="flex gap-4">
-                <Link href="/" className="hover:text-white transition-colors">Home</Link>
-                <Link href="/dashboard" className="hover:text-white transition-colors">Sandbox</Link>
-              </div>
-            </div>
           </div>
         </div>
+        <Footer />
       </div>
     </PageTransition>
   );
