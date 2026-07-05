@@ -140,8 +140,8 @@ export function Footer() {
       </div>
 
       {/* Giant faint backdrop text */}
-      <div className="absolute bottom-[-3rem] left-0 right-0 pointer-events-none select-none overflow-hidden h-[16rem] flex items-end">
-        <span className="text-[14vw] font-intro-display font-extrabold text-white/[0.03] select-none tracking-tighter leading-none translate-y-[15%] uppercase w-full text-left pl-4 sm:pl-8">
+      <div className="absolute bottom-2 left-0 right-0 pointer-events-none select-none overflow-hidden flex items-end">
+        <span className="text-[14vw] font-intro-display font-extrabold text-white/[0.03] select-none tracking-tighter leading-none uppercase w-full text-left pl-4 sm:pl-8">
           DeepGreen
         </span>
       </div>
