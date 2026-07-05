@@ -123,7 +123,6 @@ export function AboutUs() {
         for (let i = 0; i < totalFrames; i++) {
           if (isDestroyed) return;
           const time = (i / (totalFrames - 1)) * (video.duration - 0.05);
-          video.currentTime = time;
 
           await new Promise<void>((resolve, reject) => {
             const onSeeked = () => {
@@ -131,6 +130,10 @@ export function AboutUs() {
               resolve();
             };
             video.addEventListener("seeked", onSeeked);
+            
+            // Trigger seek after adding the listener to avoid race conditions
+            video.currentTime = time;
+
             setTimeout(() => {
               video.removeEventListener("seeked", onSeeked);
               reject(new Error("Seek timeout"));
